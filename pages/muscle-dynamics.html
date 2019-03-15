@@ -12,13 +12,13 @@
 <link rel="canonical" href="/pages/muscle-dynamics.html">
 
         <meta name="author" content="Maarten Afschrift" />
-        <meta name="description" content="Muscle redundancy solver In the human movement biomechanics group, we provided MATLAB code solves the muscle redundancy problem using the direct collocation optimal control software GPOPS-II as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle …" />
+        <meta name="description" content="Muscle redundancy solver In the human movement biomechanics group, we provided MATLAB code that solves the muscle redundancy problem using the direct collocation optimal control software GPOPS-II as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the …" />
 
     <meta property="og:site_name" content="Research - Maarten Afschrift" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Muscle dynamics"/>
     <meta property="og:url" content="/pages/muscle-dynamics.html"/>
-    <meta property="og:description" content="Muscle redundancy solver In the human movement biomechanics group, we provided MATLAB code solves the muscle redundancy problem using the direct collocation optimal control software GPOPS-II as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle …" />
+    <meta property="og:description" content="Muscle redundancy solver In the human movement biomechanics group, we provided MATLAB code that solves the muscle redundancy problem using the direct collocation optimal control software GPOPS-II as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the …" />
 
 
 
@@ -81,7 +81,7 @@ Research - Maarten Afschrift            </a>
         <div class="entry-content">
             <div class="section" id="muscle-redundancy-solver">
 <h2>Muscle redundancy solver</h2>
-<p>In the human movement biomechanics group, we provided MATLAB code solves the muscle redundancy problem using the direct collocation optimal control software GPOPS-II as described in <strong>De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle redundancy problem. Annals of Biomedical Engineering (2016) (DeGroote2016)</strong>. The main advantage of this formulation compared to CMC or static optimiation is that it:</p>
+<p>In the human movement biomechanics group, we provided MATLAB code that solves the muscle redundancy problem using the direct collocation optimal control software GPOPS-II as described in <em>De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle redundancy problem. Annals of Biomedical Engineering (2016)</em>. The main advantage of this formulation compared to CMC or static optimiation is that it:</p>
 <ul class="simple">
 <li>Simulates the full hill type muscle model (i.e. SO neglects tendons and parallel elastic elements)</li>
 <li>Optimizes the muscle excitations globally instead of locally (i.e. CMC)</li>
@@ -89,11 +89,11 @@ Research - Maarten Afschrift            </a>
 </ul>
 <p>Link to the Github project: <a class="reference external" href="https://github.com/antoinefalisse/solvemuscleredundancy_dev/">Github</a>.</p>
 </div>
-<div class="section" id="example-on-the-influence-of-tendon-stiffness">
-<h2>Example on the influence of tendon stiffness</h2>
-<p>I made a small example to showcase the importance of simulating the full hill-type muscle dynamics for estiming muscle energetics during walking. In this example, we used Umbergers equations to compute muscle energetics form the neuromuscular state. The influence of achilles tendon stiffness on metabolic energy was computed under the assumption that the joint kinematics are fixed (Note that this is a very big assumption!). The resulting figure shows that for a given walking patterns (i.e. kinemtics/kinetics) the energy cost of walking has a clear optimum around a normalized tendon stiffness around 14.</p>
-<object class="align-left" data="/images/MetabolicSimulation_Tendon.svg" style="width: 90%;" type="image/svg+xml">
-Image info</object>
+<div class="section" id="example-changes-achilles-tendon-stiffness">
+<h2>Example: changes achilles tendon stiffness</h2>
+<p>I made a small example to showcase the importance of simulating the full hill-type muscle dynamics for estiming muscle energetics during walking. In this example, we used Umbergers equations to compute muscle energetics form the neuromuscular state. The influence of achilles tendon stiffness on metabolic energy was computed under the assumption that the joint kinematics are fixed (plase note that this is a very big assumption!). The resulting figure shows that for a given walking pattern (i.e. kinemtics/kinetics) the energy cost of walking has a clear optimum around a normalized tendon stiffness of 14.</p>
+<object class="align-center" data="/images/MetabolicSimulation_Tendon.svg" style="width: 80%;" type="image/svg+xml">
+Influence</object>
 </div>
 
         </div>
