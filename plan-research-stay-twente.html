@@ -60,6 +60,9 @@ Research - Maarten Afschrift            </a>
                          <li><a href="/pages/muscle-dynamics.html">
                              Muscle dynamics
                           </a></li>
+                         <li><a href="/pages/simulations-exoskeleton.html">
+                             Simulations exoskeleton
+                          </a></li>
                         <li class="active">
                             <a href="/category/research-blog.html">Research blog</a>
                         </li>
@@ -106,13 +109,13 @@ Research - Maarten Afschrift            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>I recieved a grant from the Cost-Action project on wearable robotics for a short term scientific mission to the reserach group of Herman van der Kooij (Twente University). In this research stay of four weeks, I'll focus on identification of controllers that capture how humans control balance for bio-inspired controllers of wearable robotic devices such as exoskeletons. </p>
-<h2>Balance supporting control of exoskeletons through perturbation experiments and neuromechanical modelling.</h2>
-<h3>Aim and Motivation:</h3>
+<h3>Balance supporting control of exoskeletons through perturbation experiments and neuromechanical modelling.</h3>
+<h4>Aim and Motivation:</h4>
 <p>Robotic exoskeletons aim at assisting people with deficits in neuro-muscular function and at improving human locomotor performance. Neurological impairments often come with reduced endurance and balance deficits. While wearable robotic devices can decrease energy demands for healthy walking [1–3], such benefits have not yet been shown in impaired subjects. Furthermore, most robotic devices further impairs their ability to control balance, introducing the need for crutches as balancing aids in a pathological population [4].</p>
 <p>In order to support balance with wearable robotic devices, the robotic controller should cooperate and not interfere with the neural control system. Stable human locomotion is obtained through the stabilizing properties of muscle-tendon actuators (i.e. force-length-velocity properties) [5] and adequate changes in muscle activity [6]. Balance correcting changes in muscle activity rely on supra-spinal pathways [6,7]. In these supra-spinal pathways, sensory information from vestibular, somatosensory and visual systems is integrated in supra-spinal control structures that send a descending motor command to the muscles with a delay of 100-120ms [8]. My previous studies on supra-spinal control of balance showed that primarily muscles around the ankle and hip joint are excited or inhibited to restore balance following a perturbation[9]. This suggests that modelling supra-spinal balance control mechanisms and their interaction with exoskeleton assistance is helpful to improve the stability of the human-robot system.</p>
 <p>Driven by this motivation, I apply for a Short Term Scientific Mission (STSM) at Twente Biomechatronics and rehabilitation technology Lab (Twente University, Head: Herman van der Kooij). The main aim of this research stay is to identify supra-spinal feedback gains during walking and evaluate the validity of these feedback gains in robot-assisted locomotion. First, two datasets on perturbed walking (one collected in Leuven during my PhD [9] and one in Twente during the PhD of Mark Vlutters [7]) will be combined and analyzed using the same methods to quantify stability (i.e. extrapolated center of mass, foot placement in COM-reference system) and neural control of balance (i.e. EMG). These datasets include the human response to surface translations and perturbation at the pelvis applied in four directions and in different phases of the gait cycle. Second, neuromechanical modelling will be used in combination the two datasets to estimate supra-spinal feedback mechanisms of human balance control. Finally, we will run a pilot experiment on a single subject that walks with an exoskeleton to evaluate the validity of this neural control model in robot-assisted locomotion. We hypothesize that the same supra-spinal mechanisms will be used in the control of balance during robot-assisted locomotion. This hypothesis is based on the similar muscle responses observed when walking with an orthosis [10]. However, we also hypothesize that feedback gains will be modulated to keep the margin of stability constant [11]. Hence, we expect that the neural control will adapt to the exoskeleton actuation to control the center of mass movement with respect to the feet during locomotion.</p>
 <p>During this research stay, I aim at connecting with the host institution to foster new research contacts and networks, receive feedback on my ongoing research and further education in the broad topic of wearable robotics.  In addition, during this STSM, I hope to initiate the collaboration between the research groups in Twente and KU Leuven in the context of my application for a post-doctoral fellowship in Flanders (FWO). This research project is a collaboration between both research groups and focusses on “balance supporting and energy efficient control of wearable robotic devices”.</p>
-<h3>Techniques:</h3>
+<h4>Techniques:</h4>
 <p>As described above, the scope of the STSM is to identify supra-spinal feedback gains during walking and evaluate the validity of these feedback gains in robot-assisted locomotion in a pilot experiment. Therefore, (1) neuromechanical modelling, (2) optimal parameter estimation and (3) perturbation experiments with and without (4) robotic assistance will be used in this STSM. </p>
 <p><em>Neuromechanical modelling:</em>  In this project, we will model supra-spinal balance control as delayed feedback from the center of mass kinematics to the muscles. We expect that this will be sufficient to reconstruct the reactive activity of the hip abductor and ankle muscles, which are the main contributors to balance control. These muscles will be excited or inhibited proportionally to the center of mass kinematics from unperturbed center of mass kinematics. This reflects the observed excitation and inhibition of muscles around the ankle joint and the hip abductors muscles in perturbation experiments [7,9,12–14]. Separate feedback gains will be used for the stance and swing phase to model the change in reactive muscle activity during the gait cycle.
 Optimal parameter estimation: The feedback gains of the supra-spinal balance control mechanisms will be estimated from perturbation experiments (figure 1A). Two extensive datasets (one collected in Leuven and one in Twente) on perturbed walking will be combined and used for optimal parameter estimation. We will start from the current state-of-the-art neuromechanical models with locomotor reflexes (3D model with 22 muscles)[15], and add the supra-spinal feedback loops to this model (figure 1). Note that locomotor reflexes are mainly modelled by spinal reflexes, which contain local sensory feedback from muscle stretch, stretch rate and force [15]. The feedback gains of the locomotor and supra-spinal feedback will be optimized to track the measured muscle activity and joint kinematics and kinetics in the perturbation experiment (figure 1). Perturbation trials not used in the parameter estimation will be used for cross validation. 
@@ -143,7 +146,15 @@ Perturbation experiments to validate the neuromuscular model during robotic assi
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
-<!-- Sidebar -->
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="/images//PasFoto.jpg"/>
+        </p>
+    <p>
+      <strong>About Maarten Afschrift</strong><br/>
+        Biomechanics, musculoskeletal modelling, wearable robotics.
+    </p>
+</div><!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
 
