@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Maarten Afschrift'
-SITENAME = 'Research - Maarten Afschrift'
+AUTHOR = 'KU Leuven neuromechanics group'
+SITENAME = 'KUL Neuromechanics'
 SITEURL = ''
 
 PATH = 'content'
@@ -23,17 +23,11 @@ AUTHOR_FEED_RSS = None
 #THEME = "C:/Users/u0088756/Documents/Software/WebPage/PelicanThemesGit/~/pelican-themes/blueidea"
 
 # Blogroll
-LINKS = (('Github', 'https://github.com/MaartenAfschrift/'),('Twitter','https://twitter.com/mafschrift'),('KU Leuven HBM','https://gbiomed.kuleuven.be/english/research/50000737/groups/HMB'))
+LINKS = (('Github', 'https://github.com/MaartenAfschrift/'),('KU Leuven HBM','https://gbiomed.kuleuven.be/english/research/50000737/groups/HMB'))
 GITHUB_URL = 'https://github.com/MaartenAfschrift/'
 
-SOCIAL = (('twitter', 'https://twitter.com/mafschrift/'),
-          ('github', 'https://github.com/MaartenAfschrift/'),)
-
-#LINKS = (('KU Leuven HBM', 'https://gbiomed.kuleuven.be/english/research/50000737/groups/HMB'))
-
-
-ABOUT_ME = 'Biomechanics, musculoskeletal modelling, wearable robotics.'
-AVATAR = 'images//PasFoto.jpg'
+ABOUT_ME = 'Biomechanics, neural control, muscloskeletal modelling.'
+AVATAR = 'images/TempPicture.jpg'
 
 # Social widget
 SOCIAL = ()
@@ -41,14 +35,15 @@ DEFAULT_PAGINATION = 2
 
 # Pages
 DISPLAY_PAGES_ON_MENU = True 
-#STATIC_PATHS  = ['siteImages']
+STATIC_PATHS = [
+    'images',
+	'html',
+]
 
-# Nice and simple theme
-#THEME = 'C:/Users/u0088756/Documents/Software/WebPage/PelicanThemesGit/~/pelican-themes/built-texts'
+READERS = {'html': None}
 
 #Second theme
-#THEME = 'C:/Users/u0088756/Documents/Software/WebPage/PelicanThemesGit/~/pelican-themes/tuxlite_tbs'
-THEME = 'C:/Users/u0088756/Documents/Software/WebPage/PelicanThemesGit/~/pelican-themes/pelican-bootstrap3'
+THEME = '../Themes'
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
@@ -56,10 +51,3 @@ PLUGIN_PATHS = ['C:/Users/u0088756/Documents/Software/WebPage/pelican-plugins']
 PLUGINS = ['i18n_subsites']
 
 LINKS_WIDGET_NAME = 'Research'
-
-
-# Maths
-# PLUGINS ={'render-math'}
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True

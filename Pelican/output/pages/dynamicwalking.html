@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>DynamicWalking - KUL Neuromechanics</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/pages/dynamicwalking.html">
+
+        <meta name="author" content="KU Leuven neuromechanics group" />
+        <meta name="description" content="Purpose of the software The original intent of the provided MATLAB code was to solve the muscle redundancy problem using direct collocation as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle redundancy problem. Annals of …" />
+
+    <meta property="og:site_name" content="KUL Neuromechanics" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="DynamicWalking"/>
+    <meta property="og:url" content="/pages/dynamicwalking.html"/>
+    <meta property="og:description" content="Purpose of the software The original intent of the provided MATLAB code was to solve the muscle redundancy problem using direct collocation as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle redundancy problem. Annals of …" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+KUL Neuromechanics            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li class="active"><a href="/pages/dynamicwalking.html">
+                             DynamicWalking
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">DynamicWalking</h1>
+        
+        <div class="entry-content">
+            <h2>Purpose of the software</h2>
+<p>The original intent of the provided MATLAB code was to solve the muscle redundancy problem using direct collocation as described in De Groote F, Kinney AL, Rao AV, Fregly BJ. Evaluation of direct collocation optimal control problem formulations for solving the muscle redundancy problem. Annals of Biomedical Engineering (2016). http://link.springer.com/article/10.1007%2Fs10439-016-1591-9. </p>
+<p>From v3.0, there are possibilities to, concurrently with solving the muscle redundancy problem, estimate parameters of the modelled muscle-tendon units by using collected EMG and ultrasound data. Optimal fiber length, tendon slack length and tendon stiffness can be set as free variables within the muscle redundancy problem. Experimentally measured fiber-lengths can be tracked (US-tracking), the tracking error is a part of the objective function. Details on this parameter estimation problem can be found in Delabastita et al. 2020 (https://link.springer.com/article/10.1007/s10439-019-02395-x). Collected EMG can either be tracked (EMG-tracking) or imposed exactly (EMG-driven). Details on using EMG data in the parameter estimation can be found in (https://ieeexplore.ieee.org/document/7748556). Another important feature is that the user can estimate muscle-tendon parameters over different trials of the same movement or from different movements. This allows to make estimation more reliable. We reckon that for solving the muscle redundancy problem OpenSim Moco (https://www.biorxiv.org/content/10.1101/839381v1) might be a more user-friendly and straightforward alternative. However, our software allows the combination of different trials to estimate muscle-tendon parameters. Another difference is in that we use automatic differentiation, while this is not (yet) enabled in Moco. </p>
+<p>From v2.1, CasADi can be used as an alternative to GPOPS-II and ADiGator. CasADi is an open-source tool for nonlinear optimization and algorithmic differentiation (https://web.casadi.org/). Results using CasADi and GPOPS-II are very similar (differences can be attributed to the different direct collocation formulations and scaling). We used CasADi's Opti stack, which is a collection of CasADi helper classes that provides a close correspondence between mathematical NLP notation and computer code (https://web.casadi.org/docs/#document-opti). CasADi is actively maintained and developed, and has an active forum (https://groups.google.com/forum/#!forum/casadi-users).</p>
+<p>From v1.1, an implicit formulation of activation dynamics can be used to solve the muscle redundancy problem. Additionally, by using the activation dynamics model proposed by Raasch et al. (1997), we could introduce a nonlinear change of variables to exactly impose activation dynamics in a continuously differentiable form, omitting the need for a smooth approximation such as described in De Groote et al. (2016). A result of this change of variables is that muscle excitations are not directly accessible during the optimization. Therefore, we replaced muscle excitations by muscle activations in the objective function. This implicit formulation is described in <em>De Groote F, Pipeleers G, Jonkers I, Demeulenaere B, Patten C, Swevers J, De Schutter J. A physiology based inverse dynamic analysis of human gait: potential and perspectives F. Computer Methods in Biomechanics and Biomedical Engineering (2009).</em> http://www.tandfonline.com/doi/full/10.1080/10255840902788587. Results from both formulations are very similar (differences can be attributed to the slightly different activation dynamics models and cost functions). However, the formulation with implicit activation dynamics (De Groote et al., (2009)) is computationally faster. This can mainly be explained by the omission of a tanh function in the constraint definition, whose evaluation is computationally expensive when solving the NLP.</p>
+<h2>Presentation</h2>
+<p>.. raw:: html</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://localhost:8000/html/presentation1.html&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span><span class="nt">&gt;</span>Link to Presentation Muscle redundancy solver<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+
+<h2>Structure of the code</h2>
+<p>The code allows to solve three optimal control problems in the following order: </p>
+<ul>
+<li>
+<p>Generic muscle redundancy problem: Solves the muscle redundancy problem using the provided musculoskeletal model, inverse kinematics and/or inverse dynamics data. </p>
+</li>
+<li>
+<p>Muscle parameter estimation: Solves the muscle redundancy problem where the variable space can be extended with user-specified muscle tendon parameters. Depending on availability the user can provide experimental muscle fiber length data to be tracked by simulated fiber lengths and/or EMG data to be tracked by simulated muscle excitations. The problem can be made EMG-driven as well, where the excitations will match the EMG signal up to a specified tolerance.</p>
+</li>
+<li>
+<p>Validation muscle redundancy problem: Solves the muscle redundancy problem using the optimized musculoskeletal model, inverse kinematics and/or inverse dynamics data. The idea of this simulation is to analyse whether the parameters (optimized by the estimation problem) predict musculoskeletal behaviour better than the generic model.</p>
+</li>
+</ul>
+<p>The user is off course free to select any of the three described problems. </p>
+<p>Any questions? Please contact us:
+maarten.afschrift@kuleuven.be and tom.vanwouwe@kuleuven.be for questions on the parameter optimization algorithm;  friedl.degroote@kuleuven.beantoine.falisse@kuleuven.be.</p>
+<h2>Installation Instruction</h2>
+<p>Add the main folder and subfolder to your MATLAB path </p>
+<div class="highlight"><pre><span></span><span class="n">addpath</span><span class="p">(</span><span class="n">genpath</span><span class="p">(</span><span class="s">&#39;C/......./SimTK_optcntrlmuscle&#39;</span><span class="p">))).</span>
+</pre></div>
+
+
+<p>Several software packages are needed to run the program:</p>
+<ul>
+<li>The OpenSim MATLAB interface is used to generate the inputs to the optimal control problem based on a scaled OpenSim model and the solution of inverse kinematics (providing the solution of inverse dynamics is optional). To this aim, install OpenSim and set up the OpenSim MATLAB interface (OpenSim: https://simtk.org/frs/?group_id=91, OpenSim API: http://simtk-confluence.stanford.edu:8080/display/OpenSim/Scripting+with+Matlab).</li>
+<li>Casadi is used for nonlinear optimization and algorithmic differentiation (https://web.casadi.org/).</li>
+</ul>
+<h2>Main Function</h2>
+<p>SolveMuscleRedundancy is the main function of this program and is used to solve up to three optimal control problems. </p>
+<h3>Input arguments</h3>
+<h4>Required input arguments for SolveMuscleRedundancy</h4>
+<ol>
+<li>
+<p><strong>model_path</strong>: directory and filename of the scaled OpenSim model (.osim file). The code should work with any OpenSim model with valid muscle-tendon parameters for which OpenSim's Inverse Dynamics and Muscle Analysis Tools generate reliable results. Note that only the muscle-tendon parameters and not the muscle model specified in the osim-file are used (for details see Muscle model).</p>
+</li>
+<li>
+<p><strong>time</strong>: 1 x 2 MATLAB array with the initial and final time of the analysis in seconds. Initial and final states influence the optimal controls over a period of about 50 ms at the beginning and end of the time interval over which the optimal control problem is solved. Since in practice the initial and final states are generally unknown, problems should be solved for a time interval containing five additional data points (considering a 100Hz sampling frequency) at the beginning and end of the motion cycle. Those additional data points should not be considered in further analyses. The user should thus not be surprised to observe unrealistically high muscle activation at the beginning of the motion (more details in companion paper).</p>
+</li>
+<li>
+<p><strong>Misc</strong>: miscellaneous input arguments (matlab structure)</p>
+</li>
+<li>
+<p><strong>Misc.DofNames_Input</strong>  is a cell array specifying for which degrees of freedom you want to solve the muscle redundancy problem. Typically the muscle redundancy problem is solved for one leg at a time (there are no muscles spanning both legs).</p>
+</li>
+<li><strong>Misc.MuscleNames_Input</strong> is a cell array that specifies the muscles to be included when solving the muscle redundancy problem. All muscles that actuate (i.e. have a moment arm with respect to) the degrees of freedom specified in <em>DofNames_Input</em> will be selected by default if this array is left empty.</li>
+<li><strong>Misc.IKfile</strong>: array of filenames of the inverse kinematics solution of different motion trials (.mot file).</li>
+<li><strong>Misc.IDfile</strong>: array of filenames of the inverse dynamics solution of different motion trials (.sto file). If left empty, the inverse dynamics solution will be computed from the external loads (see Optional input arguments).</li>
+<li><strong>Misc.EMGfile</strong>: array of filenames containing EMG data of different motion trials (.mot file). </li>
+<li><strong>Misc.USfile</strong>: array of filenames containing fiberlength data of different motion trials (.mot file). The fiber length data is usually measured using ultra-sound (US).</li>
+<li><strong>Misc.UStracking</strong>: boolean to select whether you want to track provided muscle fiber lengths.</li>
+<li><strong>Misc.EMGconstr</strong>: boolean to select whether you want to track provided EMG signals.</li>
+<li><strong>Misc.MRSbool</strong>: boolean to select whether you want to solve the generic muslce redundancy problem.</li>
+<li><strong>Misc.ValidationBool</strong>: boolean to select whether you want to solve the validation muslce redundancy problem.</li>
+</ol>
+<h4>Optional input arguments</h4>
+<p>An overview of the optional input arguments can be found here.</p>
+<h2>Output arguments</h2>
+<p>We provide all state and control trajectories for the different trials and optimal control problems in one Results structure. Trajectories for different trials and optimal control problems are divided in substructures. All trajectories are interpolated on the mesh points.</p>
+<ol>
+<li>
+<p>Time: time vector [s]</p>
+</li>
+<li>
+<p>MExcitation: muscle excitation [-]</p>
+</li>
+<li>
+<p>MActivation: muscle activation [-]</p>
+</li>
+<li>
+<p>RActivation.meshPoints: activation of the reserve actuators [Nm]</p>
+</li>
+<li>
+<p>TForcetilde: normalized tendon force  [-]</p>
+</li>
+<li>
+<p>TForce: tendon force [N]</p>
+</li>
+<li>
+<p>Fpe: passive muscle force [N]</p>
+</li>
+<li>
+<p>lMTinterp: muscle tendon length from muscle analysis[m]</p>
+</li>
+<li>
+<p>lMtildeopt: normalized muscle fiber length [-]</p>
+</li>
+<li>
+<p>lm: muscle fiber length [m]</p>
+</li>
+<li>
+<p>MvM: normalized muscle fiber velocity [-]</p>
+</li>
+<li>
+<p>FMltilde: force-length multiplier [-]</p>
+</li>
+<li>
+<p>FMltilde: force-velocity multiplier [-]</p>
+</li>
+<li>
+<p>Param: scaling factors for the different optimized parameters [-]   </p>
+</li>
+<li>
+<p>Misc: for reference of the settings of the simulation we add the Misc structure to the results. </p>
+</li>
+</ol>
+<h2>Examples</h2>
+<h3>Solve the muscle redundancy problem</h3>
+<p>In this example, we only solve the muscle redundancy problem without parameter estimation. This means that we try to find the optimal muscle excitations (i.e. controls)  that reconstruct the measured inverse dynamic joint moments with minimal excitations and activations squared. This is similar as in DeGroote 2016 (http://link.springer.com/article/10.1007%2Fs10439-016-1591-9) and was the the main aim of v1 and v2 of this software.</p>
+<p>You have to specify the opensim model, inverse kinematic solution and inverse dynamic solution.</p>
+<div class="highlight"><pre><span></span><span class="n">model_path </span><span class="s"> = fullfile(DataPath,&#39;subject1.osim&#39;)</span><span class="p">;</span>
+<span class="n">Misc</span><span class="p">.</span><span class="n">IKfile</span> <span class="p">=</span> <span class="p">{</span><span class="n">fullfile</span><span class="p">(</span><span class="n">DataPath</span><span class="p">,</span><span class="s">&#39;Walking_IK.mot&#39;</span><span class="p">)};</span>
+<span class="n">Misc</span><span class="p">.</span><span class="n">IDfile</span> <span class="p">=</span> <span class="p">{</span><span class="n">fullfile</span><span class="p">(</span><span class="n">DataPath</span><span class="p">,</span><span class="s">&#39;Walking_ID.sto&#39;</span><span class="p">)};</span>
+</pre></div>
+
+
+<p>You can specify the start and end time of the analysis:</p>
+<div class="highlight"><pre><span></span><span class="n">time</span><span class="p">=[</span><span class="mf">0.516</span> <span class="mf">1.95</span><span class="p">];</span> <span class="c">% Right stance phase (+50ms beginning and end of time interval, more details see manual and publication)</span>
+</pre></div>
+
+
+<p>And you have to select the degrees of freedom you want to use in this analysis. Note that the muscle redundancy problem will only be solved for these degrees of freedom. For example if you want to solve only for the right ankle joint:</p>
+<div class="highlight"><pre><span></span><span class="n">Misc</span><span class="p">.</span><span class="n">DofNames_Input</span><span class="p">={</span><span class="s">&#39;ankle_angle_r&#39;</span><span class="p">};</span>    <span class="c">% select the DOFs you want to include in the optimization</span>
+</pre></div>
+
+
+<p>OR if you want to solve for all degrees of freedom in the ankle, knee and hip joint in this model</p>
+<div class="highlight"><pre><span></span><span class="n">Misc</span><span class="p">.</span><span class="n">DofNames_Input</span><span class="p">={</span><span class="s">&#39;ankle_angle_r&#39;</span><span class="p">,</span><span class="s">&#39;knee_angle_r&#39;</span><span class="p">,</span><span class="s">&#39;hip_flexion_r&#39;</span><span class="p">,</span><span class="s">&#39;hip_adduction_r&#39;</span><span class="p">,</span><span class="s">&#39;hip_rotation_r&#39;</span><span class="p">};</span> 
+</pre></div>
+
+
+<p>And select an output directory where you want to save the results.</p>
+<div class="highlight"><pre><span></span><span class="n">Out_path   </span><span class="s"> = fullfile(MyResultsFolder)</span><span class="p">;</span>                    <span class="c">% folder to store results</span>
+</pre></div>
+
+
+<p>You can also specify some of the optional input arguments to save the results with a specific outputname, plot the main results automatically in a matlab figure .</p>
+<div class="highlight"><pre><span></span><span class="c">% Plotter Bool: Boolean to select if you want to plot lots of output information of intermediate steps in the script</span>
+<span class="n">Misc</span><span class="p">.</span><span class="n">PlotBool</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="c">% name output</span>
+<span class="n">Misc</span><span class="p">.</span><span class="n">OutName</span> <span class="p">=</span> <span class="s">&#39;Walking_&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>As an additional optional input argument you can specify that you want to run the muscle redundancy solver. This is true by default</p>
+<div class="highlight"><pre><span></span><span class="n">Misc</span><span class="p">.</span><span class="n">MRSBool</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+
+
+<p>And finally solve the muscle redundancy problem</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Results</span><span class="p">,</span><span class="n">DatStore</span><span class="p">]</span> <span class="p">=</span> <span class="n">MuscleTendonEstimator</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">Out_path</span><span class="p">,</span><span class="n">Misc</span><span class="p">);</span>
+</pre></div>
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="/images/TempPicture.jpg"/>
+        </p>
+    <p>
+      <strong>About KU Leuven neuromechanics group</strong><br/>
+        Biomechanics, neural control, muscloskeletal modelling.
+    </p>
+</div><!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://github.com/MaartenAfschrift/" target="_blank">Github</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://gbiomed.kuleuven.be/english/research/50000737/groups/HMB" target="_blank">KU Leuven HBM</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy;  KU Leuven neuromechanics group
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+
+
+</body>
+</html>

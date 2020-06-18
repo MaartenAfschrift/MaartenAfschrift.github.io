@@ -1,14 +1,19 @@
 
-Maarten Afschrift
-==================
+KU Leuven neuromechanics software
+=================================
 :url: 
 :save_as: index.html
 
+We aim at developing predictive simulations of motion for personalized optimization of human movement. Model-based optimal treatment or training design is challenging due to (1) the difficulty to capture the complexity and inter-subject variability of the neuro-musculoskeletal system in a model, and (2) the high computational cost of numerical methods that account for the complexity of the neuro-musculoskeletal system. I therefore focus on the development of
 
-I am a postdoctoral researcher at KU Leuven with a passion for biomechanics, neural control of movement, neuro-musculoskeletal modelling and wearable robotics.
+- neuro-musculoskeletal models
+- numerical methods for analysis and simulation of movement
 
+Neuro-musculoskeletal models describe both the musculoskeletal and motor control system since human motion results from the interaction between motor control and musculoskeletal dynamics.
 
-Biomechanics and neural control of human movement is probably the most general term to describe my research interest and intentions. I'm mainly using a blended experimental and computer modelling approach to predict the influence of specific interventions on human movement. For example, I'm currently identifying balance control mechanisms in humans by measuring the neural response to perturbations during standing and walking. The resulting models of human balance control will be useful in computer-aided design of (bio-inspired) exoskeleton controllers that cooperate with humans in the control of balance during locomotion.
+We use an optimal control framework based on direct collocation to solve for neural controls that drive our simulations of human movement.
+
+On this webpage we share numerical methods for analysis and simualtion of human movement.
 
 
 
