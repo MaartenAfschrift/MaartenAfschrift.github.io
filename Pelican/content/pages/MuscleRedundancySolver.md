@@ -13,7 +13,7 @@ From v3.0, there are possibilities to, concurrently with solving the muscle redu
 
 Here you can find a presentation where we explain the main concepts of the muscle redundancy solver.
 
-<a href="http://localhost:8000/html/presentation1.html" target="_blank">Presentation Muscle redundancy solver!</a> 
+<a href="https://maartenafschrift.github.io/html/Presentation1.html" target="_blank">Presentation Muscle redundancy solver!</a> 
 
 ## Source code
 
