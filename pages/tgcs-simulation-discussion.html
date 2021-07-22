@@ -74,43 +74,15 @@ Research - Maarten Afschrift            </a>
         
         <div class="entry-content">
             <p>This page contains additional content for the simulation discussion session on TGCS 2021: <strong>Simulation of walking with added mass to validate predictive simulations of human walking</strong>. You can download the slides from my presentation here: <a href="https://kuleuven-my.sharepoint.com/:b:/g/personal/u0088756_kuleuven_be/EVGjjj8d4LFBj-UUAyE9LoIBxWPhw86XkEO5xBQ5g7gW2g?e=iOpuQp">https://kuleuven-my.sharepoint.com/:b:/g/personal/u0088756_kuleuven_be/EVGjjj8d4LFBj-UUAyE9LoIBxWPhw86XkEO5xBQ5g7gW2g?e=iOpuQp</a> if this is helpfull for the discussion session.</p>
-<h2>Simplications in modelling</h2>
-<p>My current simulations approach can predict the effect of added mass on metabolic energy consumption reasonable well, but fails the predict the effect on metabolic energy consumption. My current list on the most important modelling simplifications (and how we could test them). Anyone other idea's ?</p>
-<p>Modelling control:</p>
-<ul>
-<li>(Robust) feedback control is needed to simulate some important features in walking, such as the co-activation of the vasti and the biceps femoris before heelcontact (assumed to stiffen the knee and provide stability before the uncertain interaction with the ground).</li>
-<li>We have the objective function wrong.</li>
-</ul>
-<p>Modelling musculoskeletal dynamics:</p>
-<ul>
-<li>Errors in simulating ankle kinematic have a large influence on muscle states and metabolic energy consumption. Use an invers skeleton dynamics approach and solve the muscle redundancy problem to evaluate if the errors in kinematics can explain the error in predicted muscle states and metabolic energy consumption.</li>
-</ul>
-<p>Computing metabolic energy:</p>
-<ul>
-<li>Current energy models (Bhargava, Umberger) predict very high muscle efficiencies. We predict much largers incraesed in metabolic energy with added mass when using a model with 25% efficiency for positive work and 120% efficiency for negative work (but this model largely overstimates the COT during normal walking.</li>
-</ul>
-<p>Experiment:</p>
-<ul>
-<li>Subjects are not fully adapated to walking with added mass (7-10 minutes adaptation in experiment) and therefore have a higher metabolic cost compared to simulations.</li>
-</ul>
-<h2>Other benchmark tests to evaluate predictive validity (of walking simulations)</h2>
-<p>mechanical interventions:</p>
-<ul>
-<li>Walking with added mass</li>
-<li>walking at various speeds</li>
-<li>imposing stride frequency</li>
-<li>....</li>
-</ul>
-<p>outcomes:</p>
-<ul>
-<li>Kinematics (motion capture)</li>
-<li>Ground reaction forces (force plate)</li>
-<li>mucle activity (EMG)</li>
-<li>metabolic energy consumption (O2, CO2)</li>
-<li>muscle fiber kinematics (ultrasound)</li>
-</ul>
+<h2>Simulation discussion: open questions</h2>
+<p><img src="/images/Q1_TGCS_Disc.svg"
+     alt="First question simulation discussion"
+     style="float: left; margin-right: 10px;" /></p>
+<p><img src="/images/Q2_TGCS_Disc.svg"
+     alt="First question simulation discussion"
+     style="float: left; margin-right: 10px;" /></p>
 <h2>Overview optimization problem</h2>
-<p>The predictive simulations are based on Falisse 2019 (<a href="https://doi.org/10.1098/rsif.2019.0402">https://doi.org/10.1098/rsif.2019.0402</a>) with matlab implementation (<a href="https://github.com/antoinefalisse/3dpredictsim">https://github.com/antoinefalisse/3dpredictsim</a>). The musculoskeletal model is based on Hamner () and is implemented in opensim ().</p>
+<p>The predictive simulations are based on Falisse 2019 (<a href="https://doi.org/10.1098/rsif.2019.0402">https://doi.org/10.1098/rsif.2019.0402</a>) with matlab implementation (<a href="https://github.com/antoinefalisse/3dpredictsim">https://github.com/antoinefalisse/3dpredictsim</a>). The musculoskeletal model is based on Hamner (<a href="https://simtk-confluence.stanford.edu/display/OpenSim/Full+Body+Running+Model">https://simtk-confluence.stanford.edu/display/OpenSim/Full+Body+Running+Model</a>) and is implemented in opensim (<a href="https://simtk.org/projects/opensim">https://simtk.org/projects/opensim</a>).</p>
 <p>states:</p>
 <ul>
 <li>muscle activations</li>
@@ -145,10 +117,12 @@ Research - Maarten Afschrift            </a>
 <li>contraction dynamics</li>
 <li>skeleton dynamics</li>
 </ul>
-<p>path constraints:
-- Average walking speed
-- Symmetric walking motion (we simulate half a gait cycle)
-- Kinematic constraint to prevent penetration left and right leg during midswing.</p>
+<p>path constraints:</p>
+<ul>
+<li>Average walking speed</li>
+<li>Symmetric walking motion (we simulate half a gait cycle)</li>
+<li>Kinematic constraint to prevent penetration left and right leg during midswing.</li>
+</ul>
 <p>We used matlab to create NLP with the casadi API <a href="https://web.casadi.org/">https://web.casadi.org/</a> and solved the problem with IPOPT.</p>
 <h2>Simulations with added mass</h2>
 <p>We simulated the experiments of two papers that evaluated the effect of added mass on the kinematics and energetics of human movemement.</p>
@@ -164,7 +138,15 @@ Your browser does not support the video tag.</video>
 <video src="/images/Reference_frontal.mp4" height="500" controls>
 Your browser does not support the video tag.</video>
 
-<p>This figures gives a detailed comparison between one subjects walking in the motion capture lab and the reference simulations.</p>
+<p>This figures gives a detailed comparison between motion capture data (inverse analysis) and the predictive simulations without added mass:</p>
+<p>Joint kinematics:
+<img src="/images/Kinematics_Ref.svg"
+     alt="First question simulation discussion"
+     style="float: left; margin-right: 10px;" /></p>
+<p>Joint kinetics:
+<img src="/images/Kinetics_Ref.svg"
+     alt="First question simulation discussion"
+     style="max-width:100%;" /></p>
 <p>ADD FIGURE HERE</p>
 <h3>Comparsion influence added mass</h3>
 <p>Comparison of simulations with added mass:</p>
@@ -204,7 +186,7 @@ Your browser does not support the video tag.</video>
 <video src="/images/Tibia4.mp4" height="500" controls>
 Your browser does not support the video tag.</video>
 
-<video src="/images/Tibia4_Front.mp4" height="500" controls>
+<video src="/images/Tibia4_front.mp4" height="500" controls>
 Your browser does not support the video tag.</video>
 
 <h3>Added mass to Femur</h3>
@@ -235,6 +217,51 @@ Your browser does not support the video tag.</video>
 <p>2kg kg added to each ankle, walking at 6km/h</p>
 <video src="/images/Ankle2_6kmh.mp4" height="500" controls>
 Your browser does not support the video tag.</video>
+
+<h3>detailed figures effect added mass</h3>
+<p>Joint kinematics:
+<img src="/images/Kinematics_Browning.svg"
+     alt="First question simulation discussion"
+     style="float: left; margin-right: 10px;" /></p>
+<p>Joint kinetics:
+<img src="/images/Kinetics_Browning.svg"
+     alt="First question simulation discussion"
+     style="max-width:100%;" /></p>
+<h3>My thoughts on simplications in modelling</h3>
+<p>My current simulations approach can predict the effect of added mass on metabolic energy consumption reasonable well, but fails the predict the effect on metabolic energy consumption. My current list on the most important modelling simplifications (and how we could test them). Anyone other idea's ?</p>
+<p>Modelling control:</p>
+<ul>
+<li>(Robust) feedback control is needed to simulate some important features in walking, such as the co-activation of the vasti and the biceps femoris before heelcontact (assumed to stiffen the knee and provide stability before the uncertain interaction with the ground).</li>
+<li>We have the objective function wrong.</li>
+</ul>
+<p>Modelling musculoskeletal dynamics:</p>
+<ul>
+<li>Errors in simulating ankle kinematic have a large influence on muscle states and metabolic energy consumption. Use an invers skeleton dynamics approach and solve the muscle redundancy problem to evaluate if the errors in kinematics can explain the error in predicted muscle states and metabolic energy consumption.</li>
+</ul>
+<p>Computing metabolic energy:</p>
+<ul>
+<li>Current energy models (Bhargava, Umberger) predict very high muscle efficiencies. We predict more realistic incraeses in metabolic energy with added mass when using a model with 25% efficiency for positive work and 120% efficiency for negative work (but this model largely overstimates the COT during normal walking without added mass).</li>
+</ul>
+<p>Experiment:</p>
+<ul>
+<li>Subjects are not fully adapated to walking with added mass (7-10 minutes adaptation in experiment) and therefore have a higher metabolic cost compared to simulations.</li>
+</ul>
+<h3>My thoughts on other benchmark tests to evaluate predictive validity (of walking simulations)</h3>
+<p>mechanical interventions:</p>
+<ul>
+<li>Walking with added mass</li>
+<li>walking at various speeds</li>
+<li>imposing stride frequency</li>
+<li>....</li>
+</ul>
+<p>outcomes:</p>
+<ul>
+<li>Kinematics (motion capture)</li>
+<li>Ground reaction forces (force plate)</li>
+<li>mucle activity (EMG)</li>
+<li>metabolic energy consumption (O2, CO2)</li>
+<li>muscle fiber kinematics (ultrasound)</li>
+</ul>
         </div>
     </section>
         </div>
