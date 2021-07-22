@@ -1,1 +1,105 @@
-<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip0"><rect x="0" y="0" width="1280" height="720"/></clipPath></defs><g clip-path="url(#clip0)"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/><text font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="700" font-size="27" transform="translate(78.5934 49)">Q1: Why do we underestimate the effect of added mass on metabolic energy consumption ?<tspan font-style="italic" font-weight="400" font-size="24" x="0" y="29">(But have a reasonable prediction of effect walking speed) </tspan><tspan font-size="24" x="9.84609" y="111">Errors in musculoskeletal </tspan><tspan font-size="24" x="9.84609" y="140">modelling</tspan><tspan font-size="24" x="393.532" y="111">Errors in neural control</tspan><tspan font-size="24" x="862.769" y="111">Other errors</tspan><tspan font-weight="400" font-size="24" x="4.92305" y="543">And how to improve it ?</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="24" x="805.923" y="192">•</tspan><tspan font-weight="400" font-size="24" x="835.923" y="192">Subjects are not fully adapted </tspan><tspan font-weight="400" font-size="24" x="835.923" y="221">to walking with added mass</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="24" x="388.916" y="192">•</tspan><tspan font-weight="400" font-size="24" x="418.916" y="192">Minimizing energy is wrong</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="24" x="388.916" y="221">•</tspan><tspan font-weight="400" font-size="24" x="418.916" y="221">No model of balance</tspan><tspan font-weight="400" font-size="24" x="627.083" y="221">contro</tspan><tspan font-weight="400" font-size="24" x="690.776" y="221">l</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="24" x="-13.5735" y="193">•</tspan><tspan font-weight="400" font-size="24" x="16.4265" y="193">Large errors in ankle </tspan><tspan font-weight="400" font-size="24" x="16.4265" y="222">kinematics (due to modelling </tspan><tspan font-weight="400" font-size="24" x="16.4265" y="251">muscle geometry / foot) ?)</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="24" x="-13.5735" y="309">•</tspan><tspan font-weight="400" font-size="24" x="16.4265" y="309">Errors in energy equations ?</tspan></text><path d="M47.5001 162.501C47.5001 131.572 72.5725 106.5 103.501 106.5L327.499 106.5C358.428 106.5 383.5 131.572 383.5 162.501L383.5 490.499C383.5 521.428 358.428 546.5 327.499 546.5L103.501 546.5C72.5725 546.5 47.5001 521.428 47.5001 490.499Z" stroke="#2F528F" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><path d="M436.5 168.501C436.5 134.259 464.259 106.5 498.501 106.5L746.499 106.5C780.741 106.5 808.5 134.259 808.5 168.501L808.5 484.499C808.5 518.741 780.741 546.5 746.499 546.5L498.501 546.5C464.259 546.5 436.5 518.741 436.5 484.499Z" stroke="#2F528F" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><path d="M861.5 168.501C861.5 134.259 889.259 106.5 923.501 106.5L1171.5 106.5C1205.74 106.5 1233.5 134.259 1233.5 168.501L1233.5 484.499C1233.5 518.741 1205.74 546.5 1171.5 546.5L923.501 546.5C889.259 546.5 861.5 518.741 861.5 484.499Z" stroke="#2F528F" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="24" transform="translate(83.5164 641)">•<tspan font-family="Calibri,Calibri_MSFontService,sans-serif" x="30" y="0">Simulation with experimental kinematics and GRF to identify if</tspan><tspan font-family="Calibri,Calibri_MSFontService,sans-serif" x="643.687" y="0">error ankle kinematics explain error in energy</tspan></text></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 720" style="enable-background:new 0 0 1280 720;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st1{clip-path:url(#SVGID_2_);enable-background:new    ;}
+	.st2{font-family:'Arial-BoldMT';}
+	.st3{font-size:27px;}
+	.st4{font-family:'Arial-ItalicMT';}
+	.st5{font-size:24px;}
+	.st6{font-family:'ArialMT';}
+	.st7{clip-path:url(#SVGID_2_);fill:none;stroke:#2F528F;stroke-width:1.3333;stroke-miterlimit:8;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="1280" height="720"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect class="st0" width="1280" height="720"/>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 78.5934 49)" class="st2 st3">Q1: Why do we underestimate the effect of added mass on metabolic energy consumption ?</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 78.5934 78)" class="st4 st5">(But have a reasonable prediction of effect walking speed) </text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 88.4395 160)" class="st2 st5">Errors in musculoskeletal </text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 88.4395 189)" class="st2 st5">modelling</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 472.1254 160)" class="st2 st5">Errors in neural control</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 941.3623 160)" class="st2 st5">Other errors</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 83.5164 592)" class="st6 st5">And how to improve it ?</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 884.5164 241)" class="st6 st5">•</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 914.5164 241)" class="st6 st5">Subjects are not fully adapted </text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 914.5164 270)" class="st6 st5">to walking with added mass</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 467.5094 241)" class="st6 st5">•</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 497.5094 241)" class="st6 st5">Minimizing energy is wrong</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 467.5094 270)" class="st6 st5">•</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 497.5094 270)" class="st6 st5">No model of balance</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 705.6764 270)" class="st6 st5">contro</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 769.3694 270)" class="st6 st5">l</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 65.0199 242)" class="st6 st5">•</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 95.0199 242)" class="st6 st5">Large errors in ankle </text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 95.0199 271)" class="st6 st5">kinematics (due to modelling </text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 95.0199 300)" class="st6 st5">muscle geometry / foot) ?)</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 65.0199 358)" class="st6 st5">•</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 95.0199 358)" class="st6 st5">Errors in energy equations ?</text>
+	</g>
+	<path class="st7" d="M47.5,162.5c0-30.9,27.6-56,61.6-56h246.3c34,0,61.6,25.1,61.6,56v328c0,30.9-27.6,56-61.6,56H109.1
+		c-34,0-61.6-25.1-61.6-56V162.5z"/>
+	<path class="st7" d="M436.5,168.5c0-34.2,29-62,64.8-62h259c35.8,0,64.8,27.8,64.8,62v316c0,34.2-29,62-64.8,62h-259
+		c-35.8,0-64.8-27.8-64.8-62V168.5z"/>
+	<path class="st7" d="M861.5,168.5c0-34.2,27.8-62,62-62h248c34.2,0,62,27.8,62,62v316c0,34.2-27.8,62-62,62h-248
+		c-34.2,0-62-27.8-62-62V168.5z"/>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 83.5164 641)" class="st6 st5">•</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 113.5164 641)" class="st6 st5">Simulation with experimental kinematics and GRF to identify if</text>
+	</g>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 777.6526 641)" class="st6 st5">error ankle kinematics explain error in energy</text>
+	</g>
+</g>
+</svg>
