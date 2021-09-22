@@ -1,1 +1,47 @@
-<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip0"><rect x="0" y="0" width="1280" height="720"/></clipPath></defs><g clip-path="url(#clip0)"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/><text font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="700" font-size="27" transform="translate(84.0616 57)">Q2:<tspan x="45.1667" y="0">How to benchmark/falsify predictive simulations ?</tspan></text><path d="M94.5001 186.335C94.5001 141.691 130.691 105.5 175.335 105.5L498.665 105.5C543.309 105.5 579.5 141.691 579.5 186.335L579.5 582.665C579.5 627.309 543.309 663.5 498.665 663.5L175.335 663.5C130.691 663.5 94.5001 627.309 94.5001 582.665Z" stroke="#2F528F" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><text font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="700" font-size="24" transform="translate(148.359 149)">Mechanical interventions:<tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" x="0" y="58">•</tspan><tspan font-family="Cambria Math,Cambria Math_MSFontService,sans-serif" font-weight="400" x="30" y="58">Δ</tspan><tspan font-weight="400" x="49.8333" y="58">mass</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" x="0" y="87">•</tspan><tspan font-family="Cambria Math,Cambria Math_MSFontService,sans-serif" font-weight="400" x="30" y="87">Δ</tspan><tspan font-family="Cambria Math,Cambria Math_MSFontService,sans-serif" font-weight="400" x="44.3333" y="87"> </tspan><tspan font-weight="400" x="49.6667" y="87">walking speed</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" x="0" y="116">•</tspan><tspan font-family="Cambria Math,Cambria Math_MSFontService,sans-serif" font-weight="400" x="30" y="116">Δ</tspan><tspan font-family="Cambria Math,Cambria Math_MSFontService,sans-serif" font-weight="400" x="44.3333" y="116"> </tspan><tspan font-weight="400" x="49.6667" y="116">step frequency</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" x="0" y="144">•</tspan><tspan font-weight="400" x="30" y="144">Limit joint ROM with brace</tspan><tspan font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" x="0" y="173">•</tspan><tspan font-weight="400" x="30" y="173">…</tspan><tspan font-weight="400" x="46.5" y="173">.</tspan></text><path d="M624.5 190.668C624.5 143.631 662.631 105.5 709.668 105.5L1050.33 105.5C1097.37 105.5 1135.5 143.631 1135.5 190.668L1135.5 578.332C1135.5 625.369 1097.37 663.5 1050.33 663.5L709.668 663.5C662.631 663.5 624.5 625.369 624.5 578.332Z" stroke="#2F528F" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><text font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="700" font-size="24" transform="translate(684.083 149)">Non-<tspan x="48.8334" y="0">mechanical interventions ?</tspan></text></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 720" style="enable-background:new 0 0 1280 720;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st1{font-family:'Arial-BoldMT';}
+	.st2{font-size:27px;}
+	.st3{clip-path:url(#SVGID_2_);fill:none;stroke:#2F528F;stroke-width:1.3333;stroke-miterlimit:8;}
+	.st4{font-size:24px;}
+	.st5{font-family:'ArialMT';}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="1280" height="720"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect class="st0" width="1280" height="720"/>
+	<text transform="matrix(1 0 0 1 84.0616 57)" class="st1 st2">Q2:</text>
+	<text transform="matrix(1 0 0 1 129.2283 57)" class="st1 st2">How to benchmark/falsify predictive simulations ?</text>
+	<path class="st3" d="M94.5,186.3c0-44.6,36.2-80.8,80.8-80.8h323.3c44.6,0,80.8,36.2,80.8,80.8v396.3c0,44.6-36.2,80.8-80.8,80.8
+		H175.3c-44.6,0-80.8-36.2-80.8-80.8V186.3z"/>
+	<text transform="matrix(1 0 0 1 148.359 149)" class="st1 st4">Mechanical interventions:</text>
+	<text transform="matrix(1 0 0 1 148.359 207)" class="st5 st4">•</text>
+	<text transform="matrix(1 0 0 1 178.359 207)" class="st5 st4">Δ</text>
+	<text transform="matrix(1 0 0 1 198.1923 207)" class="st5 st4">mass</text>
+	<text transform="matrix(1 0 0 1 148.359 236)" class="st5 st4">•</text>
+	<text transform="matrix(1 0 0 1 178.359 236)" class="st5 st4">Δ</text>
+	<text transform="matrix(1 0 0 1 192.6923 236)" class="st5 st4"> </text>
+	<text transform="matrix(1 0 0 1 198.0257 236)" class="st5 st4">walking speed</text>
+	<text transform="matrix(1 0 0 1 148.359 265)" class="st5 st4">•</text>
+	<text transform="matrix(1 0 0 1 178.359 265)" class="st5 st4">Δ</text>
+	<text transform="matrix(1 0 0 1 192.6923 265)" class="st5 st4"> </text>
+	<text transform="matrix(1 0 0 1 198.0257 265)" class="st5 st4">step frequency</text>
+	<text transform="matrix(1 0 0 1 148.359 293)" class="st5 st4">•</text>
+	<text transform="matrix(1 0 0 1 178.359 293)" class="st5 st4">Limit joint ROM with brace</text>
+	<text transform="matrix(1 0 0 1 148.359 322)" class="st5 st4">•</text>
+	<text transform="matrix(1 0 0 1 178.359 322)" class="st5 st4">…</text>
+	<text transform="matrix(1 0 0 1 194.859 322)" class="st5 st4">.</text>
+	<path class="st3" d="M624.5,190.7c0-47,38.1-85.2,85.2-85.2h340.7c47,0,85.2,38.1,85.2,85.2v387.7c0,47-38.1,85.2-85.2,85.2H709.7
+		c-47,0-85.2-38.1-85.2-85.2V190.7z"/>
+	<text transform="matrix(1 0 0 1 684.083 149)" class="st1 st4">Non-</text>
+	<text transform="matrix(1 0 0 1 732.9164 149)" class="st1 st4">mechanical interventions ?</text>
+</g>
+</svg>

@@ -239,3 +239,9 @@ figure.floatcenter, .align-center {
 .gap-left {
   margin-left: 10px;
 }
+
+.video {
+    height: auto;
+    width: 20%;
+    margin-bottom: 20px;
+}
